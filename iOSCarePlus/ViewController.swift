@@ -7,10 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    @IBOutlet var logoView: UIView!
-    @IBOutlet var logoViewTopConstraint: NSLayoutConstraint!
-    @IBOutlet var backgroundImageViewLeadingConstraint: NSLayoutConstraint!
+final class ViewController: UIViewController {
+    @IBOutlet private var logoView: UIView!
+    @IBOutlet private var logoViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet private var backgroundImageViewLeadingConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,12 @@ class ViewController: UIViewController {
     }
     
     private func appearLogoViewAnimation(completion: @escaping () -> Void) {
-        UIView.animate(withDuration: 0.7, delay: 1, usingSpringWithDamping: 0.6, initialSpringVelocity: 1, options: []) { [weak self] in
+        UIView.animate(withDuration: 1.7,
+                       delay: 1,
+                       usingSpringWithDamping: 0.6,
+                       initialSpringVelocity: 1,
+                       options: []
+        ) { [weak self] in
             self?.logoViewTopConstraint.constant = 17
             self?.view.layoutIfNeeded()
         } completion: { _ in
@@ -46,14 +51,20 @@ class ViewController: UIViewController {
     }
     
     private func slideBackgroundImageAnimation() {
-        UIView.animate(withDuration: 10, delay: 0, options: [.curveEaseInOut, .repeat, .autoreverse]) { [weak self] in
+        UIView.animate(withDuration: 10,
+                       delay: 0,
+                       options: [.curveEaseInOut, .repeat, .autoreverse]
+        ) { [weak self] in
             self?.backgroundImageViewLeadingConstraint.constant = -800
             self?.view.layoutIfNeeded()
         }
     }
     
     private func blinkLogoAnimation() {
-        UIView.animateKeyframes(withDuration: 1, delay: 0, options: [.repeat, .autoreverse]) { [weak self] in
+        UIView.animateKeyframes(withDuration: 1,
+                                delay: 0,
+                                options: [.repeat, .autoreverse]
+        ) { [weak self] in
             self?.logoView.alpha = 0
         }
     }
