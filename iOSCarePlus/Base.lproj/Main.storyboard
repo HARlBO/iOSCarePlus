@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VKI-Nv-3eu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSCarePlus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="WyB-wu-9Y5">
+                                <rect key="frame" x="0.0" y="0.0" width="2071" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtx-gf-DI7">
+                                <rect key="frame" x="25" y="-156" width="80" height="79.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRd-tk-xdd">
+                                        <rect key="frame" x="9" y="23" width="62" height="33.5"/>
+                                        <string key="text">Nintendo
+Store</string>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8784313725490196" green="0.066666666666666666" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XRd-tk-xdd" secondAttribute="trailing" constant="9" id="9S4-2F-Bek"/>
+                                    <constraint firstItem="XRd-tk-xdd" firstAttribute="top" secondItem="wtx-gf-DI7" secondAttribute="top" constant="23" id="DlA-Iv-Mer"/>
+                                    <constraint firstItem="XRd-tk-xdd" firstAttribute="leading" secondItem="wtx-gf-DI7" secondAttribute="leading" constant="9" id="EsZ-0P-FDR"/>
+                                    <constraint firstAttribute="bottom" secondItem="XRd-tk-xdd" secondAttribute="bottom" constant="23" id="jhd-VY-j2k"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WyB-wu-9Y5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="48B-Ny-gSU"/>
+                            <constraint firstItem="wtx-gf-DI7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="Fpl-X7-QBV"/>
+                            <constraint firstAttribute="bottom" secondItem="WyB-wu-9Y5" secondAttribute="bottom" id="d7K-Bg-5Ju"/>
+                            <constraint firstItem="wtx-gf-DI7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-200" id="tzE-HH-bMF"/>
+                            <constraint firstItem="WyB-wu-9Y5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yjJ-0m-sQw"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="DSl-A9-PrD"/>
+                    <connections>
+                        <outlet property="backgroundImageViewLeadingConstraint" destination="yjJ-0m-sQw" id="ynN-l5-mE4"/>
+                        <outlet property="logoView" destination="wtx-gf-DI7" id="AgI-cU-O2x"/>
+                        <outlet property="logoViewTopConstraint" destination="tzE-HH-bMF" id="h2k-sL-6ZU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="116.51785714285714"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="qUp-in-hLi">
+            <objects>
+                <viewController id="Tc0-lL-XwE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ptN-wQ-rJl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yt6-EA-yLc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="qgn-k5-sRv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OA0-uh-N2A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="790"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="SZ5-id-kNn">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="VKI-Nv-3eu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CJS-jz-qPl">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="2Hc-M5-230"/>
+                        <segue destination="Tc0-lL-XwE" kind="relationship" relationship="viewControllers" id="li1-1d-Xb3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IuV-ie-Wi1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="homeBackground" width="2071" height="812"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
