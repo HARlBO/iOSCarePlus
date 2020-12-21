@@ -41,8 +41,7 @@ final class ViewController: UIViewController {
                        delay: 1,
                        usingSpringWithDamping: 0.6,
                        initialSpringVelocity: 1,
-                       options: []
-        ) { [weak self] in
+                       options: []) { [weak self] in
             self?.logoViewTopConstraint.constant = 17
             self?.view.layoutIfNeeded()
         } completion: { _ in
